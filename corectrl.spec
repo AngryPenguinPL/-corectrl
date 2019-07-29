@@ -30,7 +30,7 @@ BuildRequires:  cmake(KF5CoreAddons)
 BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  pkgconfig(botan-2)
 BuildRequires:  pkgconfig(x11)
-BuildRequires:  dstdc++-static-devel
+BuildRequires:  stdc++-static-devel
 
 BuildRequires:  desktop-file-utils
 
