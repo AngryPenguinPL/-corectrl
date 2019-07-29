@@ -73,7 +73,7 @@ See How profiles works for more info on this topic.
 %make_build
 
 %install
-%cmake_install
+%make_install
 
 %files
 #!
