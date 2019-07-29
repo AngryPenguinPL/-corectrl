@@ -68,14 +68,11 @@ See How profiles works for more info on this topic.
 %autosetup -p1 -n %{name}-v%{version}
 
 %build
-%cmake -G Ninja \
-    -DBUILD_TESTING=OFF \
-    -DCMAKE_BUILD_TYPE=Release
-    
-%ninja -C build
+%cmake
+%make_build
 
 %install
-%ninja_install -C
+%cmake_install
 
 %files
 #!
