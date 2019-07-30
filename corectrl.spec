@@ -74,6 +74,7 @@ See How profiles works for more info on this topic.
       -DBUILD_TESTING=OFF \
       -DCMAKE_INSTALL_PREFIX=/usr
 %make_build
+sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 
 %install
 %make_install
