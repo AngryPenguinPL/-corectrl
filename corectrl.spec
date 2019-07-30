@@ -72,12 +72,14 @@ See How profiles works for more info on this topic.
 %cmake  \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_TESTING=OFF \
-      -DCMAKE_INSTALL_PREFIX=/usr
-%make_build
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -G Ninja
+%ninja_build
+
 sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 
 %install
-%make_install
+%ninja_install -C build
 
 %files
 #!
