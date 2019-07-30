@@ -82,4 +82,16 @@ sed -i -- 's/\/usr/${CMAKE_INSTALL_PREFIX}/g' src/helper/cmake_install.cmake
 %ninja_install -C build
 
 %files
-#!
+%{_bindir}/%{name}
+%{_libdir}/libcorectrl.so
+%{_libdir}/libexec/kauth/corectrl_helper
+%{_libdir}/llibexec/kauth/corectrl_helperkiller
+%{_datadir}/applications/org.corectrl.corectrl.desktop
+%{_datadir}/dbus-1/system-services/org.corectrl.helper.service
+%{_datadir}/dbus-1/system-services/org.corectrl.helperkiller.service
+%{_datadir}/dbus-1/system.d/org.corectrl.helper.conf
+%{_datadir}/dbus-1/system.d/org.corectrl.helperkiller.conf
+%{_iconsdir}/hicolor/*/apps/corectrl.svg
+%{_datadir}/metainfo/org.corectrl.corectrl.appdata.xml
+%{_datadir}/polkit-1/actions/org.corectrl.helper.policy
+%{_datadir}/polkit-1/actions/org.corectrl.helperkiller.policy
