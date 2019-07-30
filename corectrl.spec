@@ -69,7 +69,10 @@ See How profiles works for more info on this topic.
 %autosetup -p1 -n %{name}-v%{version}
 
 %build
-%cmake
+%cmake  \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DBUILD_TESTING=OFF \
+      -DCMAKE_INSTALL_PREFIX=/usr
 %make_build
 
 %install
